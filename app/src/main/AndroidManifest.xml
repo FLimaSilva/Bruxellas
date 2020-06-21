@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.codecorp.felipelima.bruxellas">
+
+    <!-- Permissões para escrever no cartão de memória -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/bruxellas_logo_grande_c"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <receiver android:name=".broadcast.BroadcastReceiverTest2"
+            android:label="BroadcastReceiverTest2"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".services.ServiceTest"
+            android:enabled="true"
+            android:exported="false"/>
+
+        <service android:name=".services.JobSchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false"/>
+
+        <service android:name=".services.ServiceIntent"
+            android:exported="false"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="SERVICO_INTENT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".view.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.AdicionarNomeClienteActivity"
+            android:label="@string/title_activity_adicionar_pedido"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.EscolherPratoActivity"
+            android:label="@string/title_activity_escolher_prato"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".view.EscolherBebidaActivity" />
+        <activity
+            android:name=".view.AdicionarPratoActivity"
+            android:label="@string/title_activity_adicionar_prato"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.EscolherAdReActivity"
+            android:label="@string/title_activity_escolher_ad_re_new"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.AdicionarBebidaActivity"
+            android:label="@string/title_activity_adicionar_bebida"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.FinalizaPedidoActivity"
+            android:label="@string/title_activity_finaliza_pedido"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".view.LoginActivity" />
+        <activity
+            android:name=".view.UsuarioGarcomActivity"
+            android:label="@string/title_activity_usuario_garcom"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.UsuarioCozinhaActivity"
+            android:label="@string/title_activity_usuario_cozinha"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".view.InfoCozinhaActivity"></activity>
+    </application>
+
+</manifest>

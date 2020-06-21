@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_pedidos"
+            android:icon="@drawable/ic_restaurant_menu_black_24dp"
+            android:checkable="true"
+            android:title="Pedidos" />
+        <item
+            android:id="@+id/nav_cozinha"
+            android:icon="@drawable/ic_kitchen_black_24dp"
+            android:checkable="true"
+            android:title="Cozinha" />
+        <item
+            android:id="@+id/nav_estoque"
+            android:icon="@drawable/ic_storage_black_24dp"
+            android:checkable="true"
+            android:title="Estoque"
+            android:visible="true"/>
+    </group>
+
+    <item android:title="Comunicação">
+        <menu>
+            <item
+                android:id="@+id/nav_sobre"
+                android:icon="@drawable/ic_info_black_24dp"
+                android:checkable="true"
+                android:title="Sobre" />
+        </menu>
+    </item>
+
+    <!--<item android:title="Novos usuários">
+        <menu>
+            <item
+                android:id="@+id/new_cadastro"
+                android:icon="@drawable/ic_person_add_black_24dp"
+                android:title="Cadastrar"
+                android:checkable="true"
+                android:visible="false"/>
+        </menu>
+    </item>-->
+
+</menu>

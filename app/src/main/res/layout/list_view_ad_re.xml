@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_margin="4dp"
+    android:orientation="horizontal"
+    android:paddingBottom="4dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="4dp">
+
+    <ImageView
+        android:id="@+id/imageViewRe"
+        android:layout_width="35dp"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/ic_sub_red_24dp" />
+
+    <TextView
+        android:id="@+id/textIngQuantSel"
+        android:layout_width="35dp"
+        android:layout_height="match_parent"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:textColor="@color/Color_Text"
+        android:text="0"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/imageViewAd"
+        android:layout_width="35dp"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/ic_add_box_green_24dp" />
+
+    <TextView
+        android:id="@+id/textIngNome"
+        android:layout_width="160dp"
+        android:layout_height="match_parent"
+        android:gravity="fill_vertical"
+        android:text="Presunto"
+        android:textColor="@color/Color_Text"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textIngPreco"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="R$ 20,00"
+        android:textSize="15sp" />
+</LinearLayout>
